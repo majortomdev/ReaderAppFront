@@ -9,8 +9,10 @@ import { HomeComponent } from './components/home.component';
 import { ArticleList } from './components/article-list.component';
 import { SidePanel } from './components/side-panel.component';
 import { NavBar } from './components/nav-bar.component';
+import { Register } from './components/register.component';
 
 import { ArticleService } from './services/article.service';
+import { RegisterService } from './services/register.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { ArticleService } from './services/article.service';
     ArticleList,
     SidePanel,
     NavBar,
+    Register
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,10 @@ import { ArticleService } from './services/article.service';
     HttpModule,
     routing
   ],
-  providers: [ArticleService],
+  providers: [
+    ArticleService,
+    RegisterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
